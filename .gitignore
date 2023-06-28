@@ -4,4 +4,6 @@ data/
 
 cnn_logs/
 cnn_models/
+mlp_logs/
+mlp_models/
 models/

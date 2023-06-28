@@ -1,0 +1,45 @@
+" All use Early Stopping (trained for 1000 epochs, 10 epochs early stopping), MAE as loss, Adam as optimizer, Validation split of 0.2, batch size of 256, monitored via TensorBoard",,,,,,,,
+,,,,,,,,
+,,,,,Architecture,,,
+Model Index,Final Val MAE,Final Test MAE,Remark,,Input Size,Convolutions,Dense,Dropout
+1,4.214,4.208,Underfitting,,5x5,3x3x3,10,
+2,4.069,4.088,,,5x5,3x3x8,10,
+3,4.041,4.042,,,5x5,3x3x12,10,
+4,4.036,3.834,Heavy Overfitting,,5x5,3x3x8,"50, 10",
+5,4.047,4.107,"Not overfitting, bit underfitting",,5x5,3x3x8,"50, 10",0.2
+6,4.052,4.055,"Not overfitting, less underfitting",,5x5,3x3x8,"50, 10",0.1
+7,4.157,4.219,"Underfitting, bit unstable at end",,7x7,3x3x3,10,
+8,3.992,3.971,Nice fit,,7x7,3x3x8,10,
+9,3.996,3.607,Heavy Overfitting,,7x7,3x3x8,"50, 10",
+10,3.922,3.915,"Nice fit, unstable at end",,7x7,3x3x8,"50, 10",0.2
+11,4.142,4.016,"Underfitting, short training",,7x7,3x3x8,"50, 10","0.1, 0.1"
+12,4.01,3.278,Heavy Overfitting,,7x7,3x3x12,"100, 50, 10",0.1
+13,3.976,3.625,Overfitting,,7x7,3x3x12,"100, 50, 10",0.2
+14,3.973,3.843,Overfitting,,7x7,3x3x12,20,
+15,3.986,3.838,Overfitting,,7x7,3x3x12,20,0.05
+16,3.909,3.842,Slight overfitting at end,,7x7,3x3x12,40,0.05
+17,4.085,3.319,Heavy Overfitting,,7x7,3x3x12,80,0.1
+18,4.153,3.469,Heavy Overfitting,,7x7,3x3x12,120,0.15
+19,4.189,4.283,Slight underfitting,,9x9,3x3x3,10,
+20,4.021,3.962,"Good fit, slight overfitting at end",,9x9,3x3x8,10,
+21,4.03,3.898,"Unstable, overfitting at end",,9x9,5x5x8,10,
+22,4.013,4.043,Underfitting,,9x9,5x5x8,"100, 10","0.2, 0.2"
+23,4.152,2.945,Heavy Overfitting,,9x9,3x3x8,"100, 50, 10","0.1, 0.1, 0.1"
+24,3.964,3.465,"Unstable, heavy overfitting at end",,9x9,3x3x8,"100, 50, 10","0.2, 0.2, 0.2"
+25,4.435,3.884,"Unstable, bad",,9x9,3x3x8,"100, 50, 10","0.3, 0.3, 0.3"
+26,4.032,3.877,"Overfitting, unstable",,9x9,3x3x8,"50, 10","0.1, 0.1"
+27,3.971,4.007,"Good fit, slight underfitting",,9x9,"3x3x8, 3x3x2",10,
+28,4.087,4.076,Underfitting,,9x9,"3x3x8, 3x3x2","20, 10",
+29,4.016,4.124,Underfitting,,9x9,"3x3x8, 3x3x2","50, 10","0.1, 0.1"
+30,4.671,3.991,Extremely unstable,,9x9,"3x3x8, 3x3x2","100, 50, 10","0.1, 0.1, 0.1"
+31,3.873,3.847,"Quite good, bit overfitting at end",,7x7,3x3x12,"50, 10","0.1, 0.1"
+32,3.922,3.654,Overfitting,,7x7,3x3x20,"50, 10","0.1, 0.1"
+33,3.999,3.638,Overfitting,,7x7,3x3x20,"100, 50, 10","0.2, 0.2, 0.2"
+34,4.512,3.866,"Heavy Overfitting, very unstable",,7x7,3x3x20,"100, 50, 10","0.3, 0.3, 0.3"
+35,4.002,3.036,"Heavy overfitting, good in early training",,7x7,3x3x20,"100, 10",0.25
+36,3.965,3.624,Overfitting,,7x7,3x3x20,"75, 25",0.2
+37,3.961,3.766,Slight overfitting at end,,7x7,3x3x20,"20, 10",0.1
+38,3.968,3.715,Overfitting,,7x7,3x3x20,10,
+39,3.874,3.888,Very good fit,,7x7,3x3x20,10,0.1
+40,3.956,4.038,Slight underfitting,,7x7,3x3x20,20,0.15
+41,4.128,3.915,"Overfitting, very unstable at end",,7x7,3x3x20,25,0.1

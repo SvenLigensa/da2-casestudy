@@ -1,6 +1,7 @@
 __pycache__/
 data/
 *.pdf
+*.npy
 
 cnn_logs/
 cnn_models/

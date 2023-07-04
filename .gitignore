@@ -8,5 +8,3 @@ cnn_models/
 mlp_logs/
 mlp_models/
 models/
-CNN/
-XGBoost/

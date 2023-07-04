@@ -58,7 +58,7 @@
     - Random Forest
     - Extra Trees
     - XGBoost
-    - MLP (TODO!)
+    - MLP
     - CNN
         - Model was made more complex when it underfitted, and less complex or regularized when it overfitted
         - Progress was monitored using TensorBoard
@@ -71,12 +71,11 @@
     - CNNs: Inference time (TODO!)
 - Visualize the results with graphics
     - Label vs. Prediction
-    - Boxplots with errors (TODO!)
 
 ### 7. Deploy
 - Implement a prediction script
 - Apply the model to new satellite images to predict the tree heights
-- Grahic: RGB Image vs. Predictions of the best model on the whole image (TODO!)
+- Grahic: RGB Image vs. Predictions of the best model on the whole image
 
 ### 8. Monitor
 - Not necessary
